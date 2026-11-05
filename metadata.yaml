@@ -1,0 +1,10 @@
+name: astrbot_plugin_github_kantu
+display_name: GitHub解图
+desc: |
+  GitHub解图：贴一个 GitHub 仓库链接，就自动画出一张数据卡片——星标、分叉、未关闭议题、主要语言、开源许可、最近更新，一眼看完。也可以发 /kantu 手动查。
+help: 直接把 GitHub 仓库链接发进聊天即可自动出卡片；想手动查就发「/kantu owner/repo」，例如「/kantu koishijs/koishi」。别名：/repo、/看图、/仓库。可在插件配置里关闭自动识别、限制单条消息出图数量、填 GitHub token 提高接口额度或用 proxy 走代理。
+version: 0.1.0
+author: 娜莉灵
+support_platforms:
+  - aiocqhttp
+astrbot_version: ">=v4.12.0"

@@ -1,0 +1,68 @@
+{
+  "github_token": {
+    "description": "GitHub Token（可选）",
+    "hint": "填了就用你的身份访问 GitHub 接口，每小时额度从 60 次提高到 5000 次。只需要公开仓库读取权限，随便建一个 classic token 不勾任何权限即可。留空表示匿名访问。",
+    "type": "string",
+    "default": ""
+  },
+  "auto_link_enabled": {
+    "description": "自动识别聊天里的仓库链接",
+    "hint": "开启后，聊天里出现 github.com/owner/repo 链接就自动出卡片，不用发命令。关闭后只能用 /kantu 命令查。默认开启。",
+    "type": "bool",
+    "default": true
+  },
+  "max_links_per_message": {
+    "description": "单条消息最多出几张卡片",
+    "hint": "一条消息里贴了好几个仓库链接时，最多给前几个出卡片，避免刷屏。默认 1 张。",
+    "type": "int",
+    "default": 1
+  },
+  "suppress_llm_on_card": {
+    "description": "出卡片时拦住大模型回复",
+    "hint": "开启后，自动出卡片的那条消息不再交给大模型接话，避免「既出图又回一句」。默认关闭，保持原有聊天行为不变。",
+    "type": "bool",
+    "default": false
+  },
+  "cooldown_seconds": {
+    "description": "冷却时间（秒）",
+    "hint": "同一个会话在冷却时间内重复发命令，只回一句提示，不再请求。0 表示不限制。默认 3 秒。",
+    "type": "int",
+    "default": 3
+  },
+  "cache_ttl_seconds": {
+    "description": "卡片缓存时间（秒）",
+    "hint": "同一个仓库在缓存期内直接复用上次画好的图，不再请求接口。默认 1800 秒（半小时）。0 表示不缓存。",
+    "type": "int",
+    "default": 1800
+  },
+  "timeout_seconds": {
+    "description": "请求超时（秒）",
+    "hint": "单次请求最多等多久，超时就回一句提示。默认 12 秒。",
+    "type": "int",
+    "default": 12
+  },
+  "proxy": {
+    "description": "代理地址",
+    "hint": "服务器直连 GitHub 不稳定时填写，例如 http://127.0.0.1:7890。留空表示直连。",
+    "type": "string",
+    "default": ""
+  },
+  "insecure_tls": {
+    "description": "跳过证书校验",
+    "hint": "默认关闭。只有在服务器证书链异常（比如被中间人代理拦截）导致连不上 GitHub 时才打开，会降低安全性。",
+    "type": "bool",
+    "default": false
+  },
+  "show_avatar": {
+    "description": "卡片显示仓库头像",
+    "hint": "关闭后不拉取头像，卡片用首字母占位，少一次网络请求。默认开启。",
+    "type": "bool",
+    "default": true
+  },
+  "font_path": {
+    "description": "字体文件路径（可选）",
+    "hint": "卡片默认自动查找系统里的中文字体（微软雅黑 / Noto Sans CJK / 文泉驿等）。如果卡片上中文变成方块，在这里填一个 .ttf/.ttc 的绝对路径。",
+    "type": "string",
+    "default": ""
+  }
+}
