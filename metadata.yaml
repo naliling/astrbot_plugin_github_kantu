@@ -6,6 +6,10 @@ help: 直接把 GitHub 仓库链接发进聊天即可自动出卡片；想手动
 version: 0.1.0
 author: 娜莉灵
 repo: https://github.com/naliling/astrbot_plugin_github_kantu
+tags:
+  - github解析
+  - GitHub
+  - 生图
 support_platforms:
   - aiocqhttp
 astrbot_version: ">=v4.12.0"
