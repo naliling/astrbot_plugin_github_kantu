@@ -5,6 +5,7 @@ desc: |
 help: 直接把 GitHub 仓库链接发进聊天即可自动出卡片；想手动查就发「/kantu owner/repo」，例如「/kantu koishijs/koishi」。别名：/repo、/看图、/仓库。可在插件配置里关闭自动识别、限制单条消息出图数量、填 GitHub token 提高接口额度或用 proxy 走代理。
 version: 0.1.0
 author: 娜莉灵
+repo: https://github.com/naliling/astrbot_plugin_github_kantu
 support_platforms:
   - aiocqhttp
 astrbot_version: ">=v4.12.0"
